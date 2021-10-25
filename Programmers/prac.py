@@ -1,15 +1,12 @@
-lottos = [44, 1, 0, 0, 31, 25]	
-win_nums = [31, 10, 45, 1, 6, 19]
+a = [1,2,3,4]
+b = [-3,-1,0,2]
 
-def solution(lottos, win_nums):
-    rank = [6, 6, 5, 4, 3, 2, 1]
-    correct = 0
-    zeroCount = lottos.count(0)
+def solution(a, b):
+    answer = 0
+    
+    for i in range(len(a)):
+        answer += a[i] * b[i]
 
-    for i in win_nums:
-        if i in lottos:
-            correct += 1
+    return answer
 
-    return rank[correct+zeroCount], rank[correct]
-
-print(solution(lottos, win_nums))
+print(solution(a, b))

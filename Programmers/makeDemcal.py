@@ -13,3 +13,5 @@ def solution(nums):
     for i in A:
         if check(i[0], i[1], i[2]): answer +=1
     return answer
+
+print(solution(nums))
