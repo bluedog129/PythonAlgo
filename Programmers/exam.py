@@ -17,7 +17,7 @@ def solution(answers):
             c2 += 1
         if a3[s3] == answers[i]:
             c3 += 1
-    
+        
     k = max(c1,c2,c3)
     answer = []
 
@@ -27,7 +27,6 @@ def solution(answers):
         answer.append(2)
     if k == c3:
         answer.append(3)
-
 
     
     return answer

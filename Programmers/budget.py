@@ -15,6 +15,7 @@ def solution(d, budget):
 
 print(solution(d, budget))
 
+# sol2
 def solution(d, budget):
     d.sort()
     while budget < sum(d):
