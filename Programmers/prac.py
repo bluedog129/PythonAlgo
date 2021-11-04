@@ -1,31 +1,14 @@
-s = "abcabcabcabcdededededede"
+array = [1, 5, 2, 6, 3, 7, 4]
+commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
 
-def solution(s):
-    length = []
-    result = ""
-    
-    if len(s) == 1:
-        return 1
-    
-    for cut in range(1, len(s) // 2 + 1): 
-        count = 1
-        tempStr = s[:cut] 
-        for i in range(cut, len(s), cut):
-            if s[i:i+cut] == tempStr:
-                count += 1
-            else:
-                if count == 1:
-                    count = ""
-                result += str(count) + tempStr
-                tempStr = s[i:i+cut]
-                count = 1
+def solution(array, commands):
+    answer = []
 
-        if count == 1:
-            count = ""
-        result += str(count) + tempStr
-        length.append(len(result))
-        result = ""
-    
-    return min(length)
+    for i in range(len(commands)):
+        arr = array[commands[i][0]-1:commands[i][1]]
+        arr.sort()
+        answer.append(arr[commands[i][2]-1])
 
-print(solution(s))
+    return answer
+
+print(solution(array, commands))
