@@ -1,14 +1,18 @@
-array = [1, 5, 2, 6, 3, 7, 4]
-commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+N = 5
+stages = [2, 1, 2, 6, 2, 4, 3, 3]
 
-def solution(array, commands):
-    answer = []
+def solution(N, stages):
+    result = {}
+    denominator = len(stages)
 
-    for i in range(len(commands)):
-        arr = array[commands[i][0]-1:commands[i][1]]
-        arr.sort()
-        answer.append(arr[commands[i][2]-1])
+    for stage in range(1, N+1):
+        if denominator != 0:
+            count = stage.count(stage)
+            result[stage] = count / denominator
+            denominator -= count
+        
+        else : 
+            result[stage] = 0
 
-    return answer
 
-print(solution(array, commands))
+    return 
