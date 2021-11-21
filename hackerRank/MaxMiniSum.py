@@ -15,8 +15,4 @@ def miniMaxSum(arr):
     print(minResult, maxResult)
 
 
-def Main():
-
-    miniMaxSum(arr)
-
 print(miniMaxSum(arr))
