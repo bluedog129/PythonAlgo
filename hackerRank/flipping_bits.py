@@ -12,6 +12,7 @@ def flippingBits(n):
         else :
             x = 1
 
+        # 결과값 리턴
         result += 2**i * x
 
     return result
