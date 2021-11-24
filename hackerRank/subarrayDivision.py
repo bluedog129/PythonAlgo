@@ -7,13 +7,12 @@ m = 2
 def add(a, b):
     return a+b
 
-
 def birthday(s, d, m):
 
     count = 0
 
     for i in range(len(s)):
-        temp_list = s[i:i+m] # 부분 배열의 길이 m 만큼 생성
+        temp_list = s[i:i+m] # 길이 m 만큼 부분배열 생성
         if reduce(add, temp_list) == d:
             count += 1
         
