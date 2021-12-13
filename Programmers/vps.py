@@ -1,5 +1,7 @@
 s = "))(()"
 
+
+# 1 스택을 이용하는 방법
 def solution(s):
     
     answer = True
@@ -28,7 +30,24 @@ def solution(s):
 
 print(solution(s))
 
+# 2
+def sol2(s):
+    c = 0
 
+    for x in s:
+        if x == '(':
+            c += 1
+        else:
+            c -= 1
+
+        if c < 0:
+            return False
+
+    return c == 0
+
+print(sol2(s))
+
+# 3 
 def is_pair(s):
     # 함수를 완성하세요
     x = 0
@@ -39,3 +58,8 @@ def is_pair(s):
     return x==0
 
 print(is_pair(s))
+
+
+
+
+
