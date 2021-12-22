@@ -6,6 +6,7 @@ completion = ["stanko", "ana", "mislav"]
 def sol1(participant, completion):
     for i in completion: # O(n)
         participant.remove(i) # O(n)
+        # 따라서 시간복잡도가 O(n^2)이 되기 때문에 효율성 테스트는 실패한다.
     return str(participant[0])
 
 print(sol1(participant, completion))
@@ -14,7 +15,7 @@ print(sol1(participant, completion))
 def solution(participant, completion):
     answer = ""
 
-    participant.sort()
+    participant.sort() # 정렬은 시간복잡도 O(n log n)이다.
     completion.sort()
 
     for i in range(len(completion)):
