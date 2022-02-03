@@ -20,7 +20,3 @@ class Node:
     @property
     def prev(self):
         return self.__prev
-    
-    @prev.setter
-    def prev(self, p):
-        
