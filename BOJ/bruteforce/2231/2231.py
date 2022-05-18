@@ -7,6 +7,6 @@ for i in range(1, n+1):
     result = i + sum(lst)
     if result == n:
         print(i)
-        break;
+        break
     if i == n:
         print(0)
