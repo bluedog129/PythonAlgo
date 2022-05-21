@@ -10,8 +10,11 @@ for _ in range(lows_len):
 # a는 행, b는 열에 대하여 원래의 체스 판에서 8*8로 자를 수 있는 범위의 시작점을 가리킴
 for a in range(lows_len - 7):
     for b in range(cols_len - 7):
+        # 'W'로 시작할 경우 바뀐 체스 판의 갯수를 세는 변수
         index1 = 0
+        # 'B'로 시작할 경우 바뀐 체스 판의 갯수를 세는 변수
         index2 = 0
+        # a, b 기준으로 8칸씩 체크
         for i in range(a, a + 8):
             for j in range(b, b + 8):
                 if (i + j) % 2 == 0:
