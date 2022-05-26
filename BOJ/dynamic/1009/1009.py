@@ -2,6 +2,7 @@ t = int(input())
 
 for _ in range(t):
     a, b = map(int, input().split())
+    # 제곱한 수의 일의자리 수를 결정하는건 제곱하기 전 일의 자리 수
     aa = a % 10
 
     # 부르트포스로 하면 안 되기에
@@ -13,6 +14,8 @@ for _ in range(t):
         print(aa)
     # 패턴 2개
     elif aa in [4, 9]:
+        # a를 짝수로 제곱하는 경우와
+        # 홀수로 제곱하는 경우의 값 2가지로 나뉨
         bb = b % 2
         if bb == 0:
             print(aa * aa % 10)

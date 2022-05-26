@@ -7,7 +7,7 @@ def solution(N, stages):
 
     for stage in range(1, N+1):
         if denominator != 0:
-            count = stages.count(stage)
+            count = stages.count_list(stage)
             result[stage] = count / denominator
             denominator -= count
 

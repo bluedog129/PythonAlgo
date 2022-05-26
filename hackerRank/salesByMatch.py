@@ -8,7 +8,7 @@ def sockMerchant(n, ar):
     ar_set = set(ar)
 
     for i in ar_set:
-        ar_count += ar.count(i)//2
+        ar_count += ar.count_list(i) // 2
 
     return ar_count
 

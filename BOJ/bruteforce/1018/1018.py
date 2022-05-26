@@ -1,7 +1,7 @@
 lows_len, cols_len = map(int, input().split())
 
 original = []
-count = []
+count_list = []
 
 for _ in range(lows_len):
     original.append(input())
@@ -11,22 +11,26 @@ for _ in range(lows_len):
 for a in range(lows_len - 7):
     for b in range(cols_len - 7):
         # 'W'로 시작할 경우 바뀐 체스 판의 갯수를 세는 변수
-        index1 = 0
+        w_change = 0
         # 'B'로 시작할 경우 바뀐 체스 판의 갯수를 세는 변수
-        index2 = 0
+        b_change = 0
         # a, b 기준으로 8칸씩 체크
         for i in range(a, a + 8):
             for j in range(b, b + 8):
+                # i와 j를 더해야 위치를 제대로 잡을 수 있음
                 if (i + j) % 2 == 0:
+                    # 짝수칸에 B가 오면 W로 바꿔줌 그 반대는 B로 바꿔줌
+                    # 그 상황에 맞게 _index 변수에 더해줌
                     if original[i][j] != 'W':
-                        index1 += 1
+                        w_change += 1
                     if original[i][j] != 'B':
-                        index2 += 1
+                        b_change += 1
                 else:
+                    # 홀수칸은 짝수칸과 반대로
                     if original[i][j] != 'B':
-                        index1 += 1
+                        w_change += 1
                     if original[i][j] != 'W':
-                        index2 += 1
-        count.append(min(index1, index2))
+                        b_change += 1
+        count_list.append(min(w_change, b_change))
 
-print(min(count))
+print(min(count_list))
