@@ -36,7 +36,6 @@ def bfs(V):
             if(visited[i] == 1 and matrix[V][i] == 1):
                 queue.append(i)
                 visited[i] = 0
-
 dfs(V)
 print()
 bfs(V)
