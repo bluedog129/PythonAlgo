@@ -3,8 +3,8 @@ t = int(input())
 for _ in range(t):
     l_list = []
     r_list = []
-    data = input()
-    for i in data:
+    pw = input()
+    for i in pw:
         if i == '-':
             if l_list:
                 l_list.pop()
